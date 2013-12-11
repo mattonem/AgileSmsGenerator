@@ -4,16 +4,18 @@ import java.util.Date;
 
 public class Sms {
 
-	public boolean isScheduled;
+	public Date schedule;
 
 	public void schedule(Date date) {
-		// TODO Auto-generated method stub
-		
+		schedule = date;
 	}
 
 	public void annulation() {
-		// TODO Auto-generated method stub
-		this.isScheduled = false;
+		this.schedule = null;
+	}
+
+	public boolean isScheduled() {
+		return schedule == null;
 	}
 
 }
