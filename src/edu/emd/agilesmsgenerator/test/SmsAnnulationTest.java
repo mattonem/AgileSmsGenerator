@@ -5,9 +5,6 @@ import java.util.Date;
 import org.junit.Test;
 
 import junit.framework.TestCase;
-
-//import org.junit.Test;
-
 import edu.emd.agilesmsgenerator.core.Sms;
 
 public class SmsAnnulationTest extends TestCase{
