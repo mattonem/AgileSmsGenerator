@@ -1,10 +1,13 @@
 package edu.emd.agilesmsgenerator;
 
+import edu.emd.agilesmsgenerator.core.SimpleSmsSender;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 /**
  * An activity representing a single Programmation detail screen. This activity
@@ -25,15 +28,16 @@ public class ProgrammationDetailActivity extends FragmentActivity {
 		// Show the Up button in the action bar.
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
-		// savedInstanceState is non-null when there is fragment state
-		// saved from previous configurations of this activity
-		// (e.g. when rotating the screen from portrait to landscape).
-		// In this case, the fragment will automatically be re-added
-		// to its container so we don't need to manually add it.
-		// For more information, see the Fragments API guide at:
-		//
-		// http://developer.android.com/guide/components/fragments.html
-		//
+		Button envoi = (Button) findViewById(R.id.buttonValider);
+		
+		envoi.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				SimpleSmsSender sms = new SimpleSmsSender();
+				sms.send("0642449213", "La reponse est 42.");
+			}
+		});
 		
 	}
 
