@@ -2,9 +2,11 @@ package edu.emd.agilesmsgenerator.test;
 
 import java.util.Date;
 
+import org.junit.Test;
+
 import junit.framework.TestCase;
 
-import org.junit.Test;
+//import org.junit.Test;
 
 import edu.emd.agilesmsgenerator.core.Sms;
 
