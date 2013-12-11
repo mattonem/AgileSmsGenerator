@@ -22,7 +22,6 @@ import android.widget.EditText;
  */
 public class ProgrammationDetailActivity extends FragmentActivity {
 
-	@OverrideeditText1
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_programmation_detail);
