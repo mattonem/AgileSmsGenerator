@@ -10,7 +10,7 @@ public class SimpleSmsSender implements SmsSender {
 	
 	public boolean send(String phonenumber, String message){
 		
-		if(phonenumber.length() == 10 && message.length() > 0) {
+		if(phonenumber.matches("\\d{10}") && message.length() > 0) {
 			getSmsManager().sendTextMessage(phonenumber, null, message, null, null);
 			return true;
 		}
