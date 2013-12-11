@@ -25,11 +25,11 @@ public class DummyContent {
 
 	static {
 		// Add 3 sample items.
-		addItem(new DummyItem("1", "Programmation 1"
+		addItem(new DummyItem("1", "SMS Exemple 1", "023456789", "Hello"
 				));
-			addItem(new DummyItem("2", "Programmation 2" 
+			addItem(new DummyItem("2", "SMS Exemple 2", "023456789", "Bonjour" 
 				));
-			addItem(new DummyItem("3", "Programmation 3" 
+			addItem(new DummyItem("3", "SMS Exemple 3", "023456789", "Ciao" 
 				));
 	}
 
@@ -44,12 +44,16 @@ public class DummyContent {
 	public static class DummyItem {
 		public String id;
 		public String prog_name;
+		public String num_phone;
+		public String message;
 
-		public DummyItem(String id, String prog_name 
+		public DummyItem(String id, String prog_name, String num_phone, String message
 	             ) 
 		{
 			this.id = id;
 			this.prog_name = prog_name;
+			this.num_phone = num_phone;
+			this.message = message;
 		}
 		
 		@Override
