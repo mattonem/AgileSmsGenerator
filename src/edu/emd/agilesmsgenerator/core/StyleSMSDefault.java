@@ -1,4 +1,4 @@
-package core;
+package edu.emd.agilesmsgenerator.core;
 
 
 public class StyleSMSDefault implements StyleSMS {
@@ -10,20 +10,20 @@ public class StyleSMSDefault implements StyleSMS {
 
 
 	public void setNameOfDestinataire(String nameOfDestinataire) {
-		this.nameOfDestinataire = " "+nameOfDestinataire;
+		this.nameOfDestinataire = nameOfDestinataire;
 	}
 
 
 	@Override
 	public String generateMessage() {
-		// TODO Auto-generated method stub
-		return "HelloWorld"+nameOfDestinataire;
+
+		return "HelloWorld "+nameOfDestinataire;
 	}
 
 
 	@Override
 	public void changeParameter(String aNameOfDestinataire) {
-		if(nameOfDestinataire==""){
+		if(nameOfDestinataire.equals("")){
 			setNameOfDestinataire(aNameOfDestinataire);
 		}
 		else {

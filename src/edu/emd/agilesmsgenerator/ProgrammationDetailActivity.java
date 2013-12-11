@@ -1,7 +1,7 @@
 package edu.emd.agilesmsgenerator;
 
-import core.StyleSmsNewYear;
 import edu.emd.agilesmsgenerator.core.SimpleSmsSender;
+import edu.emd.agilesmsgenerator.core.StyleSmsNewYear;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;

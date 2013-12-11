@@ -11,6 +11,7 @@ public class SmsAnnulationTest extends TestCase{
 	
 	private Sms sms;
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void setUp() throws Exception {
 		sms = new Sms();
