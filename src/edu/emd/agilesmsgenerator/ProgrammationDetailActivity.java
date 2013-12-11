@@ -3,11 +3,14 @@ package edu.emd.agilesmsgenerator;
 import edu.emd.agilesmsgenerator.core.SimpleSmsSender;
 import android.content.Intent;
 import android.os.Bundle;
+import android.sax.TextElementListener;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * An activity representing a single Programmation detail screen. This activity
@@ -35,7 +38,8 @@ public class ProgrammationDetailActivity extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				SimpleSmsSender sms = new SimpleSmsSender();
-				sms.send("0642449213", "La reponse est 42.");
+				EditText text = (EditText) findViewById(R.id.text_a_envoyer);
+				sms.send("0642449213", text.getText().toString());
 			}
 		});
 		
