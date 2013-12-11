@@ -4,5 +4,7 @@
     <string name="app_name">AgileSmsGenerator</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_programmation_list">Programmations</string>
+    <string name="title_programmation_detail">Programmation Detail</string>
 
 </resources>
