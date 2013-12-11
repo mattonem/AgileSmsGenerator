@@ -34,18 +34,22 @@ public class ProgrammationDetailActivity extends FragmentActivity {
 		envoi.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				EditText textarea  = (EditText) findViewById(R.id.editText1);
+				EditText nodetel = (EditText) findViewById(R.id.nodetelephone);
 				SimpleSmsSender sms = new SimpleSmsSender();
-				sms.send("0642449213", "La reponse est 42.");
+				sms.send(nodetel.toString(), textarea.toString());
 			}
 		});
+		
 		
 		Button changerLeTexte = (Button) findViewById(R.id.buttonChangerLeTexte);
 		changerLeTexte.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				EditText textarea  = (EditText) findViewById(R.id.editText1);
+				EditText nomdest = (EditText) findViewById(R.id.contact);
 				StyleSmsNewYear smsny = new StyleSmsNewYear();
-				smsny.changeParameter("UnNom");
+				smsny.changeParameter(nomdest.toString());
 				String message = smsny.generateMessage();
 				textarea.setText(message);
 			}
