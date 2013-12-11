@@ -1,5 +1,6 @@
 package edu.emd.agilesmsgenerator;
 
+import core.StyleSmsNewYear;
 import edu.emd.agilesmsgenerator.core.SimpleSmsSender;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * An activity representing a single Programmation detail screen. This activity
@@ -29,9 +31,7 @@ public class ProgrammationDetailActivity extends FragmentActivity {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		Button envoi = (Button) findViewById(R.id.buttonValider);
-		
 		envoi.setOnClickListener(new View.OnClickListener() {
-			
 			@Override
 			public void onClick(View v) {
 				SimpleSmsSender sms = new SimpleSmsSender();
@@ -39,6 +39,17 @@ public class ProgrammationDetailActivity extends FragmentActivity {
 			}
 		});
 		
+		Button changerLeTexte = (Button) findViewById(R.id.buttonChangerLeTexte);
+		changerLeTexte.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				EditText textarea  = (EditText) findViewById(R.id.editText1);
+				StyleSmsNewYear smsny = new StyleSmsNewYear();
+				smsny.changeParameter("UnNom");
+				String message = smsny.generateMessage();
+				textarea.setText(message);
+			}
+		});
 	}
 
 	@Override

@@ -30,23 +30,18 @@
             android:orientation="vertical" 
             >
 
-            <TextView
-                android:id="@+id/button1"
+            <Button
+                android:id="@+id/buttonChangerLeTexte"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Changer le texte ?" />
+                android:text="Changer le texte !" />
             
             <Button
             android:id="@+id/buttonValider"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Valider" />
-			<Button
-            android:id="@+id/buttonSupprimer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Supprimer" />
             
         </LinearLayout>
 
