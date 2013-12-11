@@ -2,10 +2,9 @@ package edu.emd.agilesmsgenerator.test;
 
 import java.util.Date;
 
-import junit.framework.TestCase;
-
 import org.junit.Test;
 
+import junit.framework.TestCase;
 import edu.emd.agilesmsgenerator.core.Sms;
 
 public class SmsAnnulationTest extends TestCase{
@@ -21,8 +20,9 @@ public class SmsAnnulationTest extends TestCase{
 
 	@Test
 	public void test() {
+		assertTrue(sms.isScheduled());
 		sms.annulation();
-		assertEquals(sms.isScheduled,false); 
+		assertFalse(sms.isScheduled());
 	}
 
 }

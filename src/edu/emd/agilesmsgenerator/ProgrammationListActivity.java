@@ -1,8 +1,15 @@
 package edu.emd.agilesmsgenerator;
 
+import android.app.ActionBar.Tab;
+import android.app.ActionBar.TabListener;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 
 /**
  * An activity representing a list of Programmations. This activity has
@@ -47,8 +54,31 @@ public class ProgrammationListActivity extends FragmentActivity implements
 					.findFragmentById(R.id.programmation_list))
 					.setActivateOnItemClick(true);
 		}
+		
 
 		// TODO: If exposing deep links into your app, handle intents here.
+	}
+
+	
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+	    inflater.inflate(R.menu.activity_list_actions, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle presses on the action bar items
+	    switch (item.getItemId()) {
+	        case R.id.addButton:
+	        	Intent myIntent = new Intent(ProgrammationListActivity.this, ProgrammationDetailActivity.class);
+	        	this.startActivity(myIntent);
+	            return true;
+	        default:
+	        	return true;
+	    }
 	}
 
 	/**
